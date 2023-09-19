@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar"> <!-- sidebar -->
+      <ul>
+        <li class="logo">
+          <a href="#">
+            <div class="icon"><ion-icon name="logo-apple"></ion-icon></div>
+            <div class="text">Pheonix</div>
+          </a>
+        </li>
+        <div class="Menulist"> <!-- sidebar list -->
+          <li style="--bg:red;" class="active">
+            <a href="#">
+              <div class="icon"><ion-icon name="home-outline"></ion-icon></div>
+              <div class="text">Home</div>
+            </a>
+          </li>
+          <li style="--bg:orange;">
+            <a href="#">
+              <div class="icon"><ion-icon name="person-outline"></ion-icon></div>
+              <div class="text">Profile</div>
+            </a>
+          </li>
+          <li style="--bg:green;">
+            <a href="#">
+              <div class="icon"><ion-icon name="chatbubble-outline"></ion-icon></div>
+              <div class="text">Inbox</div>
+            </a>
+          </li>
+        </div>
+        <div class="bottom">
+          <a href="#">
+            <li>
+              <div class="icon">
+                <div class="imgBx">
+                  <img src="./Images/logo.avif" style="width: 80px;">
+                </div>
+              </div>
+              <div class="text">Hummingbird</div>
+          </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon"><ion-icon name="log-out-outline"></ion-icon></div>
+              <div class="text">Logout</div>
+            </a>
+          </li>
+        </div>
+      </ul>
+
+
+
+    </div>
+
+
+    <div class="main">
+      <div class="topbar">
+        <!-- Toggle -->
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search Here">
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+        <div class="user">
+          <img src="./Images/logo.avif" alt="">
+        </div>
+      </div>
+
+
+
+      <div class="cardBox">
+        <div class="card">
+          <div>
+            <div class="numbers">1,042</div>
+            <div class="cardname">Daily Views</div>
+          </div>
+          <div class="iconBox">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">80</div>
+            <div class="cardname">Sales</div>
+          </div>
+          <div class="iconBox">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">208</div>
+            <div class="cardname">Comments</div>
+          </div>
+          <div class="iconBox">
+            <i class="fa fa-comment" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">$6,042</div>
+            <div class="cardname">Earning</div>
+          </div>
+          <div class="iconBox">
+            <i class="fa fa-usd" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="graphBox">
+        <div class="box"> <canvas id="myChart"></canvas></div>
+        <div class="box"> <canvas id="earning"></canvas></div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="./chart.js"></script>
+
+
+      <div class="details">3
+        <div class="recentOrders">
+          <div class="cardHeader">
+            <h2>Recent Orders</h2>
+            <a href="#" class="btn">View All</a>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Payment</th>
+                <th> Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tv</td>
+                <td>$2100</td>
+                <td>Paid</td>
+                <td><span class="Status delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td>Fridge</td>
+                <td>$400</td>
+                <td>Paid</td>
+                <td><span class="Status pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>AC</td>
+                <td>$1200</td>
+                <td>Paid</td>
+                <td><span class="Status return">Return</span></td>
+              </tr>
+              <tr>
+                <td>Iphone 12</td>
+                <td>$1000</td>
+                <td>Paid</td>
+                <td><span class="Status progress">In Progress</span></td>
+              </tr>
+              <tr>
+                <td>Smartphone</td>
+                <td>$800</td>
+                <td>Paid</td>
+                <td><span class="Status delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td>Guitar</td>
+                <td>$100</td>
+                <td>Paid</td>
+                <td><span class="Status pending">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="recentCustomers">
+          <div class="cardHeader">
+            <h2>Recent Customers</h2>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx"><img src="./Images/img1.jpg" alt="image1"></div>
+                </td>
+                <td>
+                  <h4>Rahul<br><span>Chelani</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx"><img src="./Images/img3.jpg" alt="image2"></div>
+                </td>
+                <td>
+                  <h4>Shruti<br><span>Shrivastav</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx"><img src="./Images/img2.jpg" alt="image3"></div>
+                </td>
+                <td>
+                  <h4>Aryan<br><span>Lakhera</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx"><img src="./Images/img4.jpg" alt="image4"></div>
+                </td>
+                <td>
+                  <h4>Archi<br><span>Gupta</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx"><img src="./Images/img5.jpg" alt="image5"></div>
+                </td>
+                <td>
+                  <h4>Aditi<br><span>Sharma</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx"><img src="./Images/img 6.jpg" alt="image6"></div>
+                </td>
+                <td>
+                  <h4>Jhetha<br><span>Lal</span></h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let sidebar = document.querySelector('.sidebar');
+    let main = document.querySelector('.main');
+
+    toggle.onclick = function () {
+      sidebar.classList.toggle('active');
+      main.classList.toggle('move-right');
+    }
+
+    let Menulist = document.querySelectorAll('.Menulist li')
+
+    function activeLink() {
+      Menulist.forEach((item) => item.classList.remove('active'));
+      this.classList.add('active');
+    }
+
+    Menulist.forEach((item) =>
+      item.addEventListener('click', activeLink));
+  </script>
+
+
+</body>
+
+</html>
